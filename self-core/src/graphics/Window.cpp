@@ -8,9 +8,9 @@ namespace self
 
 		Window::Window(const char* title, int width, int height)
 		{
-			this->title = title; // title
-			this->width = width; // width
-			this->height = height; // height
+			this->title = title;
+			this->width = width;
+			this->height = height;
 			if (!this->init()) glfwTerminate();
 		}
 
@@ -51,6 +51,14 @@ namespace self
 
 			glfwMakeContextCurrent(this->window);
 			glfwSetWindowSizeCallback(this->window, windowResize);
+
+			if (glewInit() != GLEW_OK)
+			{
+				std::cout << "GLEW could not be initialized\n";
+				return false;
+			}
+
+
 			return true;
 		}
 
