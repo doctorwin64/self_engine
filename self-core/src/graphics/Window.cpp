@@ -8,9 +8,9 @@ namespace self
 
 		Window::Window(const char* title, int width, int height)
 		{
-			this->title = title;
-			this->width = width;
-			this->height = height;
+			this->title = title; // title
+			this->width = width; // width
+			this->height = height; // height
 			if (!this->init()) glfwTerminate();
 		}
 

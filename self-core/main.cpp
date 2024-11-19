@@ -4,7 +4,6 @@
 
 int main()
 {
-	// hello, world
 	using namespace self;
 	using namespace graphics;
 	
